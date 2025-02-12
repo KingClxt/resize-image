@@ -23,7 +23,7 @@ def index():
 @app.post('/upload_image')
 async def uploadImage(largeur:int=Form(...), hauteur:int = Form(...), file:UploadFile = File(...)):
     
-    directory = f"./static/img/{file.filename}"
+    directory = f"/static/img/{file.filename}"
     resize_img = None
     # print(directory)
     with open(directory, 'wb') as f:
