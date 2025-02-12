@@ -37,7 +37,7 @@ export default function Page() {
 
   const mutation = useMutation({
     mutationFn: (data) =>
-      axios.post("http://127.0.0.1:8000/upload_image", data,{
+      axios.post("https://resize-image-wu2j.onrender.com/upload_image", data,{
         responseType: 'arraybuffer',
       }),
     onSuccess: (data) => {
