@@ -69,7 +69,8 @@ export default function Page() {
     if (resizedImage) {
       const link = document.createElement('a');
       link.href = resizedImage;
-      link.download = 'image_redimensionnee.png'; // Nom du fichier à télécharger
+      const name = Math.floor(Math.random() * 90490)
+      link.download = `${name}.png`; // Nom du fichier à télécharger
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
