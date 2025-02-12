@@ -16,6 +16,10 @@ app.add_middleware(
     allow_headers = ["*"]
 )
 
+@app.get('/')
+def index():
+    return {"message":"hello"}
+
 @app.post('/upload_image')
 async def uploadImage(largeur:int=Form(...), hauteur:int = Form(...), file:UploadFile = File(...)):
     
